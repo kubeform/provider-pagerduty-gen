@@ -39,13 +39,14 @@ func main() {
 	}
 
 	opts := &util.GeneratorOptions{
-		ProviderName:         "pagerduty",
-		ProviderNameOriginal: "pagerduty",
-		ProviderData:         pagerduty.Provider().(*schema.Provider),
-		ProviderImportPath:   "github.com/terraform-providers/terraform-provider-pagerduty/pagerduty",
-		Version:              "v1alpha1",
-		APIsPath:             apisPath,
-		ControllerPath:       controllerPath,
+		ProviderName:             "pagerduty",
+		ProviderNameOriginal:     "pagerduty",
+		ProviderData:             pagerduty.Provider().(*schema.Provider),
+		ProviderGetterMethodBody: `pagerduty.Provider().(*tfschema.Provider)`,
+		ProviderImportPath:       "github.com/terraform-providers/terraform-provider-pagerduty/pagerduty",
+		Version:                  "v1alpha1",
+		APIsPath:                 apisPath,
+		ControllerPath:           controllerPath,
 	}
 	err := util.Generate(opts)
 	if err != nil {
