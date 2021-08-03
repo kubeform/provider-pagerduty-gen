@@ -1,9 +1,9 @@
 [![Slack](https://shields.io/badge/Join_Slack-salck?color=4A154B&logo=slack)](https://slack.appscode.com)
 [![Twitter](https://img.shields.io/twitter/follow/kubeform.svg?style=social&logo=twitter&label=Follow)](https://twitter.com/intent/follow?screen_name=Kubeform)
 
-# Kubeform Pagerduty Provider Code Generator
+# Kubeform PagerDuty Provider Code Generator
 
-Generates code for Kubeform Pagerduty Provider
+Kubeform code generator for [Terraform PagerDuty Provider](https://github.com/PagerDuty/terraform-provider-pagerduty)
 
 ## Installation
 
