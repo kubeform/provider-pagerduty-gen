@@ -107,7 +107,9 @@ git checkout -b "gen-${provider_version}-${gen_version}"
 rm -rf controllers
 mkdir controllers
 make gen-controllers
+
 go mod edit \
+    -replace=google.golang.org/api=google.golang.org/api@v0.59.0 \
     -replace="${provider_repo}=github.com/PagerDuty/terraform-provider-pagerduty@${provider_version}" \
     -require="kubeform.dev/provider-${provider_name}-api@${api_version}" \
     -require=gomodules.xyz/logs@v0.0.3 \
