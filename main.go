@@ -20,9 +20,8 @@ import (
 	"flag"
 	"log"
 
-	"kubeform.dev/generator-v1/util"
+	"kubeform.dev/generator-v2/util"
 
-	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"github.com/terraform-providers/terraform-provider-pagerduty/pagerduty"
 )
 
@@ -41,7 +40,7 @@ func main() {
 	opts := &util.GeneratorOptions{
 		ProviderName:             "pagerduty",
 		ProviderNameOriginal:     "pagerduty",
-		ProviderData:             pagerduty.Provider().(*schema.Provider),
+		ProviderData:             pagerduty.Provider(),
 		ProviderGetterMethodBody: `pagerduty.Provider().(*tfschema.Provider)`,
 		ProviderImportPath:       "github.com/terraform-providers/terraform-provider-pagerduty/pagerduty",
 		ProviderConfig:           "PagerDuty/pagerduty",
