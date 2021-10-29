@@ -41,7 +41,6 @@ func main() {
 		ProviderName:             "pagerduty",
 		ProviderNameOriginal:     "pagerduty",
 		ProviderData:             pagerduty.Provider(),
-		ProviderGetterMethodBody: `pagerduty.Provider().(*tfschema.Provider)`,
 		ProviderImportPath:       "github.com/terraform-providers/terraform-provider-pagerduty/pagerduty",
 		ProviderConfig:           "PagerDuty/pagerduty",
 		Version:                  "v1alpha1",
