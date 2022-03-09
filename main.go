@@ -43,6 +43,7 @@ func main() {
 		ProviderData:         pagerduty.Provider(),
 		ProviderImportPath:   "github.com/terraform-providers/terraform-provider-pagerduty/pagerduty",
 		ProviderConfig:       "PagerDuty/pagerduty",
+		TfPluginVersion:      "v2.8.0",
 		Version:              "v1alpha1",
 		APIsPath:             apisPath,
 		ControllerPath:       controllerPath,
